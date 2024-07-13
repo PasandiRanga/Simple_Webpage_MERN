@@ -1,0 +1,51 @@
+.hero-section {
+    background-image: url('https://www.marieallesfernando.com/sri-lankan-art/gallery_images/1018_big.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    text-align: left;
+    position: relative;
+    padding: 20px;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1;
+    width: 300px;
+    margin-left: 20px;
+}
+
+.welcome-message {
+    color: white;
+}
+
+.subtitle {
+    color: white;
+}
+
+.join-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #f39c12;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.join-button:hover {
+    background-color: #e67e22;
+}
+
+.name-input {
+    margin-top: 20px;
+    padding: 10px;
+}
