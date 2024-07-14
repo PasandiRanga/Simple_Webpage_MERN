@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState }from 'react';
+import { useContext } from 'react';
 import './contactForm.css'; // Add your styles here
+import { ThemeContext } from '../Contexts/ThemeContext';
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
     const [errors, setErrors] = useState({});
     const [successMessage, setSuccessMessage] = useState('');
+    const { theme } = useContext(ThemeContext);
+
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -38,7 +42,7 @@ const ContactForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="contact-form">
+        <form onSubmit={handleSubmit} className="contact-form" style={{ background: theme === 'dark' ? '#333' : '#fff', color: theme === 'dark' ? '#fff' : '#000' }}>
             <div>
                 <label>Name:</label>
                 <input
