@@ -1,24 +1,28 @@
 .hero-section {
-    background-image: url('https://www.marieallesfernando.com/sri-lankan-art/gallery_images/1018_big.jpg');
+    background-image: url('https://www.open.edu/openlearncreate/pluginfile.php/489556/theme_openlearncreate/image/0/Kandyan%20Dance.png');
     background-size: cover;
     background-position: center;
-    height: 100vh;
-    display: flex;
+    height: 90vh;
+    /* display: flex; */
     justify-content: flex-start;
     align-items: center;
     color: white;
     text-align: left;
+    /* padding: 20px; */
     position: relative;
-    padding: 20px;
 }
 
 .overlay {
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    padding: 50px;
     border-radius: 10px;
-    z-index: 1;
+    /* z-index: 1; */
     width: 300px;
-    margin-left: 20px;
+    margin-left: 150px;
+    position: absolute;
+    left: 0;
+    margin-top: 45px;
+
 }
 
 .welcome-message {
@@ -48,4 +52,19 @@
 .name-input {
     margin-top: 20px;
     padding: 10px;
+    width: 80%;
 }
+
+.current-time-container {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    background: rgba(0, 0, 0, 0.5); /* Optional: to make it more readable */
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+}
+
+
+

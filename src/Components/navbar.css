@@ -1,0 +1,16 @@
+:root {
+    --light-background: #fff;
+    --light-color: #000;
+    --dark-background: #333;
+    --dark-color: #fff;
+}
+
+[data-theme='light'] {
+    --background: var(--light-background);
+    --color: var(--light-color);
+}
+
+[data-theme='dark'] {
+    --background: var(--dark-background);
+    --color: var(--dark-color);
+}

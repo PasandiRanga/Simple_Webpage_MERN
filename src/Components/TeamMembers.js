@@ -1,25 +1,25 @@
 import React, { useContext } from 'react';
-import './about.css';
+import '../Pages/about.css';
 import { ThemeContext } from '../Contexts/ThemeContext';
 
 const teamMembers = [
     {
         id: 1,
-        name: 'John Doe',
-        description: 'CEO & Founder',
-        picture: 'john-doe.jpg',
+        name: 'Mohanji Ranganath',
+        description: 'Director',
+        picture: 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png',
     },
     {
         id: 2,
-        name: 'Jane Smith',
-        description: 'CTO',
-        picture: 'jane-smith.jpg',
+        name: 'Anusha Salwathura',
+        description: 'Deputy Director',
+        picture: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc9azdZMAx3x9fUNNPq2oSShzhAg1PZkKIJ7UHqfORrX0uS0ws69unxSmd9jG7Wtmmldo&usqp=CAU',
     },
     {
         id: 3,
-        name: 'Alice Johnson',
-        description: 'Project Manager',
-        picture: 'alice-johnson.jpg',
+        name: 'Asandi Ranganath',
+        description: 'Manager',
+        picture: 'https://cdn-icons-png.flaticon.com/512/3135/3135823.png',
     },
 ];
 
@@ -27,7 +27,7 @@ const TeamMembers = () => {
     const { theme } = useContext(ThemeContext); // Use the ThemeContext to get the current theme
 
     return (
-        <div className="accordion-content" style={{ background: theme === 'dark' ? '#333' : '#fff', color: theme === 'dark' ? '#fff' : '#000' }}>
+        <div className={`accordion-content ${theme}`}>
             {teamMembers.map((member) => (
                 <div key={member.id} className="team-member" style={{ background: theme === 'dark' ? '#333' : '#fff', color: theme === 'dark' ? '#fff' : '#000' }}>
                     <img src={member.picture} alt={member.name} className="team-member-image" />

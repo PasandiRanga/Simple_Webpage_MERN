@@ -1,11 +1,19 @@
 import React, { useContext } from 'react';
+import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { ThemeContext } from '../Contexts/ThemeContext';
 import styled from 'styled-components';
-import { AppBar, Toolbar, Button } from '@mui/material';
+import { AppBar, Toolbar, IconButton } from '@mui/material';
+import { WbSunny, NightsStay } from '@mui/icons-material';
 
 const NavBar = () => {
     const { theme, toggleTheme } = useContext(ThemeContext);
+
+    useEffect(() => {
+        document.title = "NavBar";
+        console.log("NavBar component mounted or updated");
+    }, []);
+
 
     return (
         <AppBar position="static" style={{ background: theme === 'dark' ? '#333' : '#fff', color: theme === 'dark' ? '#fff' : '#000' }}>
@@ -17,8 +25,9 @@ const NavBar = () => {
                 </NavLinks>
                 <CenteredNavLink to="/home">Ranga  Dancing  Academy</CenteredNavLink>
                 <NavLinks>
-                    <Button onClick={toggleTheme}>{theme === 'dark' ? 'Light Mode' : 'Dark Mode'}</Button>
-                </NavLinks>
+                    <IconButton onClick={toggleTheme} color="inherit">
+                        {theme === 'dark' ? <WbSunny /> : <NightsStay />}
+                    </IconButton>                </NavLinks>
             </Toolbar>
         </AppBar>
     );

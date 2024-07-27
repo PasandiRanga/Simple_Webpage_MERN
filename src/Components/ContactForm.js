@@ -1,4 +1,5 @@
 import React, { useState }from 'react';
+import { useEffect } from 'react';
 import { useContext } from 'react';
 import './contactForm.css'; // Add your styles here
 import { ThemeContext } from '../Contexts/ThemeContext';
@@ -8,6 +9,11 @@ const ContactForm = () => {
     const [errors, setErrors] = useState({});
     const [successMessage, setSuccessMessage] = useState('');
     const { theme } = useContext(ThemeContext);
+
+    useEffect(() => {
+        document.title = "Contact Form";
+        console.log("Contact Form component mounted or updated");
+    }, []);
 
 
     const handleChange = (e) => {

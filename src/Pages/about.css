@@ -1,0 +1,166 @@
+/* about.css */
+
+:root {
+    --container-bg: rgba(255, 255, 255, 0.7);
+    --text-color: #333;
+    --link-color: #007bff;
+    --active-link-color: #0056b3;
+    --header-bg: #e9ecef;
+    --header-color: #333;
+    --border-color: #ccc;
+    --acordian-color : #e4cacab7;
+}
+
+[data-theme='dark'] {
+    --container-bg: #363030;
+    --text-color: #fff;
+    --link-color: #1a4b72;
+    --active-link-color: #339af0;
+    --header-bg: #4e4e4c;
+    --header-color: #fff;
+    --border-color: #555;
+    --acordian-color : #6e6767b7;
+}
+
+body {
+    background-image: url('https://www.open.edu/openlearncreate/pluginfile.php/489556/theme_openlearncreate/image/0/Kandyan%20Dance.png');
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+.about-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background-color: var(--container-bg);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
+    margin-top: 30px;
+}
+
+.about-nav {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--link-color);
+    font-weight: bold;
+}
+
+.nav-link.active {
+    color: var(--active-link-color);
+}
+
+.about-section {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.accordion {
+    margin-top: 20px;
+    background-color: var(--acordian-color);
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+}
+
+.accordion-header {
+    background-color: var(--header-bg);
+    color: var(--header-color);
+    padding: 10px;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+.accordion-content {
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-top: none;
+    transition: background-color 0.3s, color 0.3s;
+    color: var(--text-color);
+}
+
+
+.founder-image-container {
+    margin-right: 20px; /* Space between image and text */
+}
+
+.founder-image {
+    border-radius: 50%;
+    width: 100px; /* Adjust as necessary */
+    height: 100px; /* Adjust as necessary */
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.team-member-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    
+}
+
+.team-member-info {
+    flex: 1;
+}
+
+.team-member-name {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.team-member-description {
+    margin: 0;
+    
+}
+
+/* about.css */
+
+.accordion-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.core-value-box {
+    background-color: var(--container-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    flex: 0 1 calc(45% - 20px); /* Two boxes per row */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.core-value-box:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .core-value-box {
+        flex: 0 1 100%; /* Stack on small screens */
+    }
+}
+
+
+
+
+

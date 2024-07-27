@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './home.css';
+import '../Pages/home.css';
 
 const WelcomeMessage = ({ academyName, userName }) => {
     const getWelcomeMessage = () => {
